@@ -1,0 +1,12 @@
+name: ref-test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: a
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo success
